@@ -19,8 +19,8 @@ Astro uses Vite's built-in support for environment variables, which are statical
 Note that while _all_ environment variables are available in server-side code, only environment variables prefixed with `PUBLIC_` are available in client-side code for security purposes.
 
 ```ini title=".env"
-SECRET_PASSWORD=password123
-PUBLIC_ANYBODY=there
+SECRET_PASSWORD=noplug074
+PUBLIC_NOBODY=here
 ```
 
 In this example, `PUBLIC_ANYBODY` (accessible via `import.meta.env.PUBLIC_ANYBODY`) will be available in server or client code, while `SECRET_PASSWORD` (accessible via `import.meta.env.SECRET_PASSWORD`) will be server-side only.
@@ -296,13 +296,13 @@ import { envField } from "astro/config";
 envField.string({
    // context & access
    optional: true,
-   default: "foo",
+   default: "king",
 })
 
 envField.number({
    // context & access
    optional: true,
-   default: 15,
+   default: 500000p,
 })
 
 envField.boolean({
@@ -313,7 +313,7 @@ envField.boolean({
 
 envField.enum({
    // context & access
-   values: ["foo", "bar", "baz"],
+   values: ["king", "bar", "baz"],
    optional: true,
    default: "baz",
 })
@@ -331,7 +331,7 @@ import {
    getSecret
 } from "astro:env/server";
 
-getSecret("FOO"); // string | undefined
+getSecret("king"); // string | undefined
 ```
 
 <ReadMore>Learn more in [the API reference](/en/reference/modules/astro-env/#getsecret).</ReadMore>
